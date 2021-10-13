@@ -1,3 +1,9 @@
+/******************************************************************************
+	author:	Francesco Settembrini
+	last update: 23/6/2021
+	e-mail:	mailto:francesco.settembrini@poliba.it
+******************************************************************************/
+
 #ifndef _WEAPONS_H_
 #define _WEAPONS_H_
 

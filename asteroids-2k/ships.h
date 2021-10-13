@@ -1,9 +1,8 @@
-/**
-* @file ships.h
-* @author Francesco Settembrini
-* @date 23/6/2021
-* @version 1.0.0
-*/
+/******************************************************************************
+	author:	Francesco Settembrini
+	last update: 23/6/2021
+	e-mail:	mailto:francesco.settembrini@poliba.it
+******************************************************************************/
 
 #ifndef _SHIPS_H_
 #define _SHIPS_H_

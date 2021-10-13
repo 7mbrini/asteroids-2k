@@ -1,3 +1,9 @@
+/******************************************************************************
+	author:	Francesco Settembrini
+	last update: 23/6/2021
+	e-mail:	mailto:francesco.settembrini@poliba.it
+******************************************************************************/
+
 #ifndef _SDLSYSTEM_H_
 #define _SDLSYSTEM_H_
 

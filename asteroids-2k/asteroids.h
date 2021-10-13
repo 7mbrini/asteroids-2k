@@ -1,3 +1,9 @@
+/******************************************************************************
+	author:	Francesco Settembrini
+	last update: 23/6/2021
+	e-mail:	mailto:francesco.settembrini@poliba.it
+******************************************************************************/
+
 #ifndef _ASTEROIDS_H_
 #define _ASTEROIDS_H_
 
