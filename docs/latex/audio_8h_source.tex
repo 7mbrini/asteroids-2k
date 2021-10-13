@@ -1,58 +1,64 @@
 \hypertarget{audio_8h_source}{}\doxysection{audio.\+h}
-\label{audio_8h_source}\index{D:/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/audio.h@{D:/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/audio.h}}
+\label{audio_8h_source}\index{Z:/F/dev/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/asteroids-\/2k/audio.h@{Z:/F/dev/jobs/asteroids-\/2k.msvc.gdi/asteroids-\/2k/asteroids-\/2k/audio.h}}
 \mbox{\hyperlink{audio_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_SOUNDMANAGER\_H\_}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_SOUNDMANAGER\_H\_}}
-\DoxyCodeLine{3 }
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <al/al.h>}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <al/alc.h>}}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{    author: Francesco Settembrini}}
+\DoxyCodeLine{3 \textcolor{comment}{    last update: 23/6/2021}}
+\DoxyCodeLine{4 \textcolor{comment}{    e-\/mail: mailto:francesco.settembrini@poliba.it}}
+\DoxyCodeLine{5 \textcolor{comment}{******************************************************************************/}}
 \DoxyCodeLine{6 }
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <map>}}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}}}
-\DoxyCodeLine{13 \{}
-\DoxyCodeLine{14     ALCcontext *pAlcContext;}
-\DoxyCodeLine{15     ALCdevice *pAlcDevice;}
-\DoxyCodeLine{16 \};}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_SOUNDMANAGER\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_SOUNDMANAGER\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <al/al.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <al/alc.h>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{16 }
 \DoxyCodeLine{17 }
-\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_sound_track}{TSoundTrack}}}
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}}}
 \DoxyCodeLine{19 \{}
-\DoxyCodeLine{20     std::string strName;}
-\DoxyCodeLine{21     ALuint nBufferId, nSourceId;}
+\DoxyCodeLine{20     ALCcontext *pAlcContext;}
+\DoxyCodeLine{21     ALCdevice *pAlcDevice;}
 \DoxyCodeLine{22 \};}
 \DoxyCodeLine{23 }
-\DoxyCodeLine{24 \textcolor{keyword}{typedef} std::vector<TSoundTrack> TSoundTracks;}
-\DoxyCodeLine{25 \textcolor{keyword}{typedef} std::map< std::string, TSoundTrack > TMapSoundTracks;}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}}
-\DoxyCodeLine{28 \{}
-\DoxyCodeLine{29     \mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} *pALSystem;}
-\DoxyCodeLine{30     TMapSoundTracks SoundTracks;}
-\DoxyCodeLine{31 \};}
+\DoxyCodeLine{24 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_sound_track}{TSoundTrack}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     std::string strName;}
+\DoxyCodeLine{27     ALuint nBufferId, nSourceId;}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} std::vector<TSoundTrack> TSoundTracks;}
+\DoxyCodeLine{31 \textcolor{keyword}{typedef} std::map< std::string, TSoundTrack > TMapSoundTracks;}
 \DoxyCodeLine{32 }
-\DoxyCodeLine{33 \textcolor{keywordtype}{bool} \mbox{\hyperlink{audio_8h_a8c6bc8030c65629ec8de9c496921bd1e}{SetupSoundManager}}(\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} *pALSystem);}
-\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a4020d7dd3f6238fca182479125b328d3}{CleanupSoundManager}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36 \textcolor{keywordtype}{double} \mbox{\hyperlink{audio_8h_af05dbafb2b59c84a32bbb254eb043cba}{GetMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
-\DoxyCodeLine{37 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a1448cea2db39b00a0a8edf376f80c998}{SetMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, \textcolor{keywordtype}{double} Volume);}
+\DoxyCodeLine{33 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} *pALSystem;}
+\DoxyCodeLine{36     TMapSoundTracks SoundTracks;}
+\DoxyCodeLine{37 \};}
 \DoxyCodeLine{38 }
-\DoxyCodeLine{39 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a68020f9183280a22033f4241990bd4ed}{IncreaseMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
-\DoxyCodeLine{40 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a64e389a4988544791aa4bc77c1de937e}{DecreaseMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{39 \textcolor{keywordtype}{bool} \mbox{\hyperlink{audio_8h_a8c6bc8030c65629ec8de9c496921bd1e}{SetupSoundManager}}(\mbox{\hyperlink{struct_t_a_l_system}{TALSystem}} *pALSystem);}
+\DoxyCodeLine{40 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a4020d7dd3f6238fca182479125b328d3}{CleanupSoundManager}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
 \DoxyCodeLine{41 }
-\DoxyCodeLine{42 \textcolor{keywordtype}{bool} \mbox{\hyperlink{audio_8h_adc242cd5f26893fc7a64c78e9bed19aa}{LoadTheSounds}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::vector<std::string> strSounds);}
-\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_ad3796c7046f972c699abcf74198b65f8}{FreeTheSounds}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
-\DoxyCodeLine{44 \textcolor{keywordtype}{bool} \mbox{\hyperlink{audio_8h_a2f6e89259aa74ff437660258f111de3f}{LoadTheSound}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strFileName);}
-\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a3b7b5dcf847a8bf3bc9d9a403f63ccb4}{PlayTheSound}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strSound, \textcolor{keywordtype}{bool} bLoop = \textcolor{keyword}{false});}
-\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_ab4af3dd7893838a4842d3f12eb3e0026}{StopTheSound}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strSound);}
-\DoxyCodeLine{47 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a51a8a131257960260d1f0454d371c6cc}{StopAllSounds}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49 \textcolor{keywordtype}{char}* \mbox{\hyperlink{audio_8h_ae5cc10d1202e4c540acbd4a39cf1174c}{LoadWAV}}(std::string strFileName, \textcolor{keywordtype}{int}\& nChannels, \textcolor{keywordtype}{int}\& nSampleRate, \textcolor{keywordtype}{int}\& nBps, \textcolor{keywordtype}{int}\& nSize);}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{52 }
+\DoxyCodeLine{42 \textcolor{keywordtype}{double} \mbox{\hyperlink{audio_8h_af05dbafb2b59c84a32bbb254eb043cba}{GetMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a1448cea2db39b00a0a8edf376f80c998}{SetMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, \textcolor{keywordtype}{double} Volume);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a68020f9183280a22033f4241990bd4ed}{IncreaseMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a64e389a4988544791aa4bc77c1de937e}{DecreaseMasterVolume}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keywordtype}{bool} \mbox{\hyperlink{audio_8h_adc242cd5f26893fc7a64c78e9bed19aa}{LoadTheSounds}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::vector<std::string> strSounds);}
+\DoxyCodeLine{49 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_ad3796c7046f972c699abcf74198b65f8}{FreeTheSounds}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{50 \textcolor{keywordtype}{bool} \mbox{\hyperlink{audio_8h_a2f6e89259aa74ff437660258f111de3f}{LoadTheSound}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strFileName);}
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a3b7b5dcf847a8bf3bc9d9a403f63ccb4}{PlayTheSound}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strSound, \textcolor{keywordtype}{bool} bLoop = \textcolor{keyword}{false});}
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_ab4af3dd7893838a4842d3f12eb3e0026}{StopTheSound}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM, std::string strSound);}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} \mbox{\hyperlink{audio_8h_a51a8a131257960260d1f0454d371c6cc}{StopAllSounds}}(\mbox{\hyperlink{struct_t_sound_manager}{TSoundManager}}* pSM);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keywordtype}{char}* \mbox{\hyperlink{audio_8h_ae5cc10d1202e4c540acbd4a39cf1174c}{LoadWAV}}(std::string strFileName, \textcolor{keywordtype}{int}\& nChannels, \textcolor{keywordtype}{int}\& nSampleRate, \textcolor{keywordtype}{int}\& nBps, \textcolor{keywordtype}{int}\& nSize);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{58 }
 
 \end{DoxyCode}
