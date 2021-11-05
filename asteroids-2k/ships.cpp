@@ -270,7 +270,7 @@ double GetRot(TShip* pShip)
 /*!****************************************************************************
 * @brief	Set the ship velocity
 * @param	pShip Pointer to the ship data structure
-* @param	The velocity value to be set for the ship
+* @param	Vel The velocity value for the ship
 ******************************************************************************/
 void SetVel(TShip* pShip, TVector2 Vel)
 {
@@ -558,7 +558,14 @@ void Update(TShip* pShip, double Dt)
 											// ... blink the shield when time is running out
 					if( pShip->nShieldTick > SHIELDTICKS*3.0/4.0)
 					{
-						DrawLines(pShip->pVM, Shield, 0, pShip->Color * ShadeLevel);
+						int nRed = GetRValue(pShip->Color);
+						int nGreen = GetGValue(pShip->Color);
+						int nBlue = GetBValue(pShip->Color);
+						
+						COLORREF nColor = RGB(nRed*ShadeLevel, nGreen*ShadeLevel, nBlue*ShadeLevel);
+						
+						//DrawLines(pShip->pVM, Shield, 0, pShip->Color * ShadeLevel);
+						DrawLines(pShip->pVM, Shield, 0, nColor);
 					}
 					else
 					{
